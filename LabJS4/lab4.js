@@ -9,7 +9,7 @@ export class Book {
 *Создаёт книгу
 *@param {string} title Название книги.
 *@param {number} pubYear Год издания.
-*@param{number} price Цена книги.
+*@param{number} price цена книги.
 */
     
     constructor(title, pubYear, price) {
