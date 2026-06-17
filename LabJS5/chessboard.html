@@ -1,375 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шахматная доска</title>
-</head>
-
-<body>
-    <table cellpadding="0" cellspacing="0"
-        style="background:white;font-size:88%;border:1px #b0b0b0 solid;padding:0;margin:auto">
-        <tbody style="vertical-align:middle;text-align:center;">
-            <tr>
-                <td style="vertical-align:inherit;padding:0"></td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">a</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">b</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">c</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">d</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">e</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">f</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">g</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">h</td>
-                <td style="vertical-align:inherit;padding:0"></td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;width:18px;height:26px">8</td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="a8 чёрная ладья"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/26px-Chess_rdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/39px-Chess_rdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/52px-Chess_rdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="b8 чёрный конь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/26px-Chess_ndt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/39px-Chess_ndt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/52px-Chess_ndt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="c8 чёрный слон"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/26px-Chess_bdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/39px-Chess_bdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/52px-Chess_bdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="d8 чёрный ферзь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/26px-Chess_qdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/39px-Chess_qdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/52px-Chess_qdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="e8 чёрный король"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/26px-Chess_kdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/39px-Chess_kdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/52px-Chess_kdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="f8 чёрный слон"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/26px-Chess_bdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/39px-Chess_bdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/52px-Chess_bdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="g8 чёрный конь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/26px-Chess_ndt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/39px-Chess_ndt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/52px-Chess_ndt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="h8 чёрная ладья"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/26px-Chess_rdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/39px-Chess_rdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/52px-Chess_rdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="padding:0;vertical-align:inherit;width:18px;height:26px">8</td>
-            </tr>
-            <tr style="vertical-align:middle">
-                <td style="padding:0;vertical-align:inherit;height:26px">7</td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="a7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="b7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="c7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="d7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="e7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="f7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="g7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="h7 чёрная пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/26px-Chess_pdt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/39px-Chess_pdt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/52px-Chess_pdt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="padding:0;vertical-align:inherit;height:26px">7</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">6</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td style="padding:0;vertical-align:inherit;height:26px">6</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">5</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td style="padding:0;vertical-align:inherit;height:26px">5</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">4</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td style="padding:0;vertical-align:inherit;height:26px">4</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">3</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td style="padding:0;vertical-align:inherit;height:26px">3</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">2</td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="a2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="b2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td style="position:relative">
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="c2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="d2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="e2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="f2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="g2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="h2 белая пешка"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/26px-Chess_plt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/39px-Chess_plt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/52px-Chess_plt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="padding:0;vertical-align:inherit;height:26px">2</td>
-            </tr>
-            <tr>
-                <td style="padding:0;vertical-align:inherit;height:26px">1</td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="a1 белая ладья"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/26px-Chess_rlt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/39px-Chess_rlt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/52px-Chess_rlt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="b1 белый конь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/26px-Chess_nlt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/39px-Chess_nlt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/52px-Chess_nlt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="c1 белый слон"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/26px-Chess_blt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/39px-Chess_blt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/52px-Chess_blt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="d1 белый ферзь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/26px-Chess_qlt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/39px-Chess_qlt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/52px-Chess_qlt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="e1 белый король"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/26px-Chess_klt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/39px-Chess_klt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/52px-Chess_klt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="f1 белый слон"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/26px-Chess_blt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/39px-Chess_blt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/52px-Chess_blt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="g1 белый конь"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/26px-Chess_nlt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/39px-Chess_nlt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/52px-Chess_nlt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="position:relative">
-                    <div style="position:absolute;z-index:3;top:0px;left:0px;width:26px;height:26px"><img
-                            alt="h1 белая ладья"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/26px-Chess_rlt45.svg.png"
-                            decoding="async" width="26" height="26"
-                            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/39px-Chess_rlt45.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/52px-Chess_rlt45.svg.png 2x"
-                            data-file-width="45" data-file-height="45"></div>
-                </td>
-                <td style="padding:0;vertical-align:inherit;height:26px">1</td>
-            </tr>
-            <tr>
-                <td style="vertical-align:inherit;padding:0"></td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">a</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">b</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">c</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">d</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">e</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">f</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">g</td>
-                <td style="padding:0;vertical-align:inherit;height:18px;width:26px">h</td>
-                <td style="vertical-align:inherit;padding:0"></td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        let table = document.getElementsByTagName('table')[0];
-
-        for (let i = 1; i < table.rows.length-1; i++) {
-            for (let j = 1; j < table.rows.length-1; j++) {
-                if((i + j)%2 == 0) table.rows[i].cells[j].style.backgroundColor = '#ffce9e';
-                else table.rows[i].cells[j].style.backgroundColor = '#d18b47';
-                
-            }
-            
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .chessboard {
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 0 auto;
+        }
+        .chessboard td {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .chessboard th {
+            width: 60px;
+            height: 30px;
+            font-weight: normal;
+            color: #555;
+        }
+        .light {
+            background-color: #ffce9e;
+        }
+        .dark {
+            background-color: #d18b47;
+        }
+        .letter-col, .number-col {
+            background-color: #f0f0f0;
+            border: none;
+        }
+        .piece {
+            font-size: 32px;
+            display: inline-block;
+        }
+        .white-piece {
+            color: white;
+            text-shadow: 0 0 2px black;
+        }
+        .black-piece {
+            color: #222;
+            text-shadow: 0 0 1px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>♜ Шахматная доска ♞</h1>
+        <table class="chessboard" id="chessboard">
+            <script>
+                const pieces = {
+                    'a8': '♜', 'b8': '♞', 'c8': '♝', 'd8': '♛', 'e8': '♚', 'f8': '♝', 'g8': '♞', 'h8': '♜',
+                    'a7': '♟', 'b7': '♟', 'c7': '♟', 'd7': '♟', 'e7': '♟', 'f7': '♟', 'g7': '♟', 'h7': '♟',
+                    'a1': '♖', 'b1': '♘', 'c1': '♗', 'd1': '♕', 'e1': '♔', 'f1': '♗', 'g1': '♘', 'h1': '♖',
+                    'a2': '♙', 'b2': '♙', 'c2': '♙', 'd2': '♙', 'e2': '♙', 'f2': '♙', 'g2': '♙', 'h2': '♙'
+                };
+                const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+                const board = document.getElementById('chessboard');
+                
+                let topRow = document.createElement('tr');
+                topRow.appendChild(document.createElement('th'));
+                for (let i = 0; i < 8; i++) {
+                    let th = document.createElement('th');
+                    th.textContent = letters[i];
+                    th.className = 'letter-col';
+                    topRow.appendChild(th);
+                }
+                topRow.appendChild(document.createElement('th'));
+                board.appendChild(topRow);
+                
+                for (let row = 8; row >= 1; row--) {
+                    const tr = document.createElement('tr');
+                    const thLeft = document.createElement('th');
+                    thLeft.textContent = row;
+                    thLeft.className = 'number-col';
+                    tr.appendChild(thLeft);
+                    
+                    for (let col = 0; col < 8; col++) {
+                        const td = document.createElement('td');
+                        const letter = letters[col];
+                        const cellKey = letter + row;
+                        const isDark = (row + col) % 2 === 0;
+                        td.className = isDark ? 'dark' : 'light';
+                        
+                        if (pieces[cellKey]) {
+                            const pieceSpan = document.createElement('span');
+                            pieceSpan.textContent = pieces[cellKey];
+                            pieceSpan.className = 'piece';
+                            if (row <= 2) {
+                                pieceSpan.classList.add('white-piece');
+                            } else {
+                                pieceSpan.classList.add('black-piece');
+                            }
+                            td.appendChild(pieceSpan);
+                        }
+                        tr.appendChild(td);
+                    }
+                    
+                    const thRight = document.createElement('th');
+                    thRight.textContent = row;
+                    thRight.className = 'number-col';
+                    tr.appendChild(thRight);
+                    board.appendChild(tr);
+                }
+                
+                let bottomRow = document.createElement('tr');
+                bottomRow.appendChild(document.createElement('th'));
+                for (let i = 0; i < 8; i++) {
+                    let th = document.createElement('th');
+                    th.textContent = letters[i];
+                    th.className = 'letter-col';
+                    bottomRow.appendChild(th);
+                }
+                bottomRow.appendChild(document.createElement('th'));
+                board.appendChild(bottomRow);
+            </script>
+        </table>
+    </div>
 </body>
-
 </html>
