@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дата</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    h1 {
+        color: #000000; 
+        text-align: center; 
+        padding: 20px 0; 
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    ol {
+        list-style-type: none; 
+        padding: 0; 
+    }
+
+    li {
+        margin-top: 10px; 
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 18px;
+    }
+
+    a:hover {
+        text-decoration: underline; 
+    }
+</style>
+<script>
+  "use strict";
+
+  function formatDate(date){
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+
+      if(month < 10) month = '0' + month;
+      if(day < 10) day = '0' + day;
+
+      return `${day}.${month}.${year}`;
+  }
+
+  function displayDate() {
+      const formattedDateElement = document.getElementById('formattedDate');
+      let d = new Date(2014, 4, 1); 
+      const formattedDate = formatDate(d);
+      formattedDateElement.textContent = formattedDate;
+      console.log(formattedDate);
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+      displayDate(); 
+  });
+</script>
+</head>
+<body>
+  <h1>Дата:</h1>
+  <div class="center">
+    <p id="formattedDate"></p>
+  </div>
+</body>
+</html>
