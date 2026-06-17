@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсказка</title>
+    <style>
+        ::placeholder {
+            color: rgb(0, 0, 0);
+        }
+        .label-right {
+            position: absolute;
+            right: -140px; 
+            top: 0;
+            visibility: hidden;
+        }
+        .form-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form" class="form-container">
+        <input id="placeholder" type="text" data-placeholder="Введите имя">
+        <label for="placeholder" class="label-right">Введите ваше имя</label>   
+    </form>
+    
+    <script>
+      let form = document.getElementById("form");
+      let formField = form.getElementsByTagName('input')[0];
+      let label = form.getElementsByTagName('label')[0];
+
+      formField.setAttribute('placeholder', formField.dataset.placeholder);
+
+      formField.addEventListener('focus', () => {
+          label.style.visibility = 'visible';
+          formField.setAttribute('placeholder', '');
+      });
+
+      formField.addEventListener('blur', () => {
+          label.style.visibility = 'hidden';
+          formField.setAttribute('placeholder', formField.dataset.placeholder);
+      });
+    </script>
+
+</body>
+</html>

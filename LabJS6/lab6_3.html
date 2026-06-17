@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Редактирование текста</title>
+<style>
+    #editableDiv {
+        border: 1px solid #ccc;
+        padding: 10px;
+        cursor: text;
+    }
+    #editableTextarea {
+        display: none;
+        width: 100%;
+        height: 200px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        resize: none;
+    }
+    .placeholder {
+        color: #aaa;
+    }
+</style>
+</head>
+<body>
+
+<div id="editableDiv" contenteditable="true" class="placeholder">
+    Кликните здесь и нажмите Ctrl+E для редактирования
+</div>
+<textarea id="editableTextarea"></textarea>
+
+<script>
+    var div = document.getElementById("editableDiv")
+    var textarea = document.createElement('textarea')
+    var temp
+    document.addEventListener("keydown", function changeTag(event){
+        if(event.ctrlKey && event.key === 'e'){
+            event.preventDefault()
+            div.innerHTML = textarea.innerHTML
+            div.parentNode.replaceChild(textarea, div)
+            textarea.focus()
+        }
+        else if((event.ctrlKey && event.key === 's' && textarea.parentNode)){
+            event.preventDefault()
+            div.innerText=textarea.value
+            temp=textarea.value
+            textarea.parentNode.replaceChild(div, textarea)
+        }
+        else if(event.keyCode == 27 && temp){
+            event.preventDefault()
+            div.innerText=temp
+            textarea.parentNode.replaceChild(div, textarea)
+        }
+    })
+</script>
+
+</body>
+</html>
