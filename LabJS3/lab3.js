@@ -1,128 +1,101 @@
-//Задание 1
-/**
- * Возвращает дробную часть числа.
- * 
- * @param {number} num число, от которого нужно найти дробную часть.
- * @return {number} дрообную часть числа.
+import { fib } from './lab2.js';
+
+
+ * @param {number} num - Исходное число.
+ * @returns {number} Дробная часть числа.
  */
-export function getDecimal(num){
-    if(num > 0) return +(num - Math.trunc(num)).toFixed(2);
-    if(num <= 0) return num + Math.ceil(-num); 
+export function getDecimal(num) {
+    return +(num >= 0 ? num % 1 : 1 + (num % 1)).toFixed(2);
 }
 
-//Задание 2
 /**
- * Нормализует URL, добавляя префикс "https://" в случае его отсутствия
- * Или заменяет префикс "http://" на "https://"
+ * Нормализует URL-адрес, добавляя или заменяя протокол на 'https://'.
  * 
- * @param {string} url URL, который нужно нормализовать, должен быть строкой
- * @return {string} нормализованный URL.
+ * @param {string} url - Исходный URL-адрес.
+ * @returns {string} Нормализованный URL-адрес с протоколом https.
  */
-export function normalizeUrl(url){
-    return url.includes("https://") ? url : url.includes("http://") ? url.replace("http://", "https://") : `https://${url}`;
-} 
-
-//Задание 3
-/**
- * Проверяет, содержит ли строка подстроку "viagra" или "XXX" (независимо от регистра).
- *
- * @param {string} str строка для проверки, должна быть строкового типа
- * @return {boolean} возвращает true, если строка содержит подстроку "viagra" или "XXX", иначе возвращает false.
- */
-export function checkSpam(str){
-    return str.toLowerCase().includes("viagra") || str.toUpperCase().includes("XXX");
+export function normalizeUrl(url) {
+   if (url.startsWith('http://')) {
+    return 'https://' + url.slice(7);
+   }
+   if (url.startsWith('https://')) {
+    return url;
+   }
+   return 'https://' + url;
 }
 
-//Задание 4
 /**
- * Обрезает строку до указанной длины и добавляет многоточие в конце, если строка превышает максимальную длину.
- *
- * @param {string} str строка, длину которой проверяем
- * @param {number} maxlength максимально возможная длина строки
- * @return {string} Возвращает обрезанную строку с многоточием в конце, если исходная строка превышает максимальную длину, инача возвращает исходную строку.
+ * Проверяет строку на наличие спам-слов ('viagra' или 'xxx').
+ * Регистр символов не учитывается.
+ * 
+ * @param {string} str - Проверяемая строка.
+ * @returns {boolean} true, если строка содержит спам; иначе false.
  */
-export function truncate(str, maxlength){
-    if(str.length > maxlength){
-        return str.slice(0, maxlength-1) + '\u2026';
-    }
+export function checkSpam(str) {
+    const lowerStr = str.toLowerCase();
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+/**
+ * Усекает строку до заданной максимальной длины, добавляя троеточие в конец.
+ * Длина итоговой строки вместе с троеточием не превышает maxlength.
+ * 
+ * @param {string} str - Исходная строка.
+ * @param {number} maxlength - Максимально допустимая длина строки.
+ * @returns {string} Усеченная или исходная строка.
+ */
+export function truncate(str, maxlength) {
+    if (str.length > maxlength)
+        return str.slice(0, maxlength - 1) + '…';
     return str;
 }
 
-// export function camelize(str){//Надо просмотреть
-//     return str.replace(/-(.)/g, function(match, p1) {
-//         return p1.toUpperCase();
-//     });
-// }
-
-//Задание 5
+/**
+ * Преобразует строку из формата camel-case (через дефис) в формат camelCase.
+ * Например: "my-long-word" преобразует в "myLongWord".
+ * 
+ * @param {string} str - Строка с дефисами.
+ * @returns {string} Строка в формате camelCase.
+ */
+export function camelize(str) {
+    return str.split('-').map((word, index) => {
+        if (index === 0)
+            return word;
+        return word ? word[0].toUpperCase() + word.slice(1) : '';
+    }).join('');
+}
 
 /**
- * Преобразует строку с дефисами в строку вида "camelCase".
- *
- * @param {string} str строка с дефисами, которую необходимо преобразовать
- * @return {string} Возвращает строку в формате "camelCase".
+ * Генерирует массив, содержащий первые n чисел Фибоначчи.
+ * Использует внешнюю функцию fib() для расчета каждого числа.
+ * 
+ * @param {number} n - Количество чисел Фибоначчи для генерации.
+ * @returns {number[]} Массив с числами Фибоначчи.
  */
-export function camelize(str){
-    let word = str.split('-');
-    for (let i = 0; i < word.length; i++) {
-        if(i != 0){
-            word[i] = ucFirst(word[i]);
-        }
+export function fibs(n) {
+    const result = [];
+    for (let i = 0; i < n; i++) {
+        result.push(fib(i));
     }
-    return word.join('');
+    return result;
 }
 
 /**
- * Преобразует первый символ строки в верхний регистр.
- *
- * @param {string} str строка для преобразования.
- * @return {string} Возвращает строку с первым символом в верхнем регистре.
+ * Возвращает массив уникальных значений.
+ * @template T
+ * @param {Array<T>} arr - Входной массив.
+ * @returns {Array<T>} Массив уникальных значений.
  */
-export function ucFirst(str){
-    return !str ? str : str[0].toUpperCase() + str.slice(1);
+export function arrReverseSorted(arr) {
+    return arr.slice().sort((a, b) => b - a);
 }
 
-//Задание 6
-
 /**
- * Возвращает массив, заполненый числами Фибоначчи до n-ого(не включая его).
- *
- * @param {number} n количество чисел Фибоначчи, должно быть натуральным числом.
- * @return {BigInt[]} Возвращает массив n чисел Фибоначчи.
+ * Возвращает новый массив, содержащий только уникальные элементы исходного массива.
+ * 
+ * @param {Array} arr - Исходный массив с возможными дубликатами.
+ * @returns {Array} Массив, состоящий из уникальных элементов.
  */
-export function fibs(n){
-    let arr = [0n, 1n]; // Начинаем с двух первых чисел Фибоначчи
-    for (let i = 2; i < n; i++) {
-        arr.push(arr[i - 1] + arr[i - 2]); // Генерируем следующее число Фибоначчи, складывая два предыдущих
-    }
-    return arr;
-}
-
-//Задание 7
-
-/**
- * Возвращает копию массива, отсортированного по убыванию.
- *
- * @param {Array} arr массив для сортировки.
- * @return {Array} Возвращает новый массив, отсортированный по убыванию.
- */
-export function arrReverseSorted(arr){
-    const arrForCopy = arr.slice();
-    arrForCopy.sort((a, b) => {
-        return a < b ? 1 : a > b ? -1 : 0;
-    });
-    return arrForCopy;
-}
-
-//Задание 8
-
-/**
- * Возвращает массив с уникальными, не повторяющимися значениями исходного массива.
- *
- * @param {Array} arr исходный массив.
- * @return {Array} Возвращает новый массив с уникальными элементами.
- */
-export function unique(arr){
-    const uniqueArr = [...new Set(arr)];
-    return uniqueArr;
+export function unique(arr) {
+    return [...new Set(arr)];
 }

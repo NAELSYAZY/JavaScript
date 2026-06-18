@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестирование lab3.js</title>
+    <!-- добавим стили mocha для отображения результатов -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- добавляем сам фреймворк mocha -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
     <script>
         // включаем режим тестирования в стиле BDD
@@ -25,7 +27,7 @@
     <script type="module">
         import {
             getDecimal,
-            ucFirst,
+            normalizeUrl,
             checkSpam,
             truncate,
             camelize,
@@ -50,14 +52,22 @@
 
         });
 
-        describe("ucFirst", function () {
+        describe("normalizeUrl", function () {
 
-            it("ucFirst('') => ''", function () {
-                assert.strictEqual(ucFirst(''), '');
+            it("normalizeUrl('yandex.ru') => 'https://yandex.ru'", function () {
+                assert.strictEqual(normalizeUrl('yandex.ru'), 'https://yandex.ru');
             });
 
-            it("ucFirst('привет') => 'Привет'", function () {
-                assert.strictEqual(ucFirst('привет'), 'Привет');
+            it("normalizeUrl('http://yandex.ru') => 'https://yandex.ru'", function () {
+                assert.strictEqual(normalizeUrl('http://yandex.ru'), 'https://yandex.ru');
+            });
+
+            it("normalizeUrl('https://yandex.ru') => 'https://yandex.ru'", function () {
+                assert.strictEqual(normalizeUrl('https://yandex.ru'), 'https://yandex.ru');
+            });
+
+            it("normalizeUrl('https.ru') => 'https://https.ru'", function () {
+                assert.strictEqual(normalizeUrl('https.ru'), 'https://https.ru');
             });
 
         });
@@ -112,8 +122,8 @@
 
         describe("arrReverseSorted", function () {
 
-            it("arrReverseSorted([1, 3, 2]) => [3, 2, 1]", function () {
-                assert.deepEqual(arrReverseSorted([1, 3, 2]), [3, 2, 1]);
+            it("arrReverseSorted([1, 3, 22]) => [22, 3, 1]", function () {
+                assert.deepEqual(arrReverseSorted([1, 3, 22]), [22, 3, 1]);
             });
 
         });
